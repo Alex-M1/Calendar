@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <section class="main">
+            <header class="d-flex header">
+                <h1 class="col-md-9">Calendar</h1>
+                <div class="col-md-3 d-flex justify-content-between">
+                    <select class="header-item form-control filter">
+                        <option value="All members">All members</option>
+                        <option value="Anton">Anton</option>
+                        <option value="Maria">Maria</option>
+                        <option value="Bob">Bob</option>
+                        <option value="Alex">Alex</option>
+                    </select>
+
+                    <button class="btn btn-primary header-item" id="add-event">
+                        Add event
+                    </button>
+                </div>
+
+            </header>
+
+            <table class="calendar">
+                <tr>
+                    <th>Name</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                </tr>
+                <tr data-time="10">
+                    <td class="time">10:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr data-time="11">
+                    <td class="time">11:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr data-time="12">
+                    <td class="time">12:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr data-time="13">
+                    <td class="time">13:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr data-time="14">
+                    <td class="time">14:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr data-time="15">
+                    <td class="time">15:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr data-time="16">
+                    <td class="time">16:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr data-time="17">
+                    <td class="time">17:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr data-time="18">
+                    <td class="time">18:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </section>
+        <section class="event">
+            <div class="add-error">
+                <span>🞪</span>
+                Falied to create event. This slot already blocked
+            </div>
+            <form class="add">
+                <div class="add-option d-flex">
+                    <span class="col-md-4">Name of event</span>
+                    <input type="text" class="col-md-6 add-elem form-control" id="evt-name">
+                </div>
+                <div class="add-option d-flex">
+                    <span class="col-md-4">Participants</span>
+                    <div class="dropdown col-md-6 add-elem">
+                        <button class="form-control dropdown-button" id="peoples">
+                            All members
+                        </button>
+                        <div class="dropdown-menu" data-toggle-id="peoples">
+                            <label for="All" class="dropdown-item d-flex align-items-center">
+                                <p class="col-md-6">All members</p>
+                                <input class="col-md-6 people-check" type="checkbox" value="All members" id="All"
+                                    checked>
+                            </label>
+                            <label for="Anton" class="dropdown-item d-flex align-items-center">
+                                <p class="col-md-6">Anton</p>
+                                <input class="col-md-6 people-check" type="checkbox" value="Anton" id="Anton" checked>
+                            </label>
+                            <label for="Maria" class="dropdown-item d-flex align-items-center">
+                                <p class="col-md-6">Maria</p>
+                                <input class="col-md-6 people-check" type="checkbox" value="Maria" id="Maria" checked>
+                            </label>
+                            <label for="Bob" class="dropdown-item d-flex align-items-center">
+                                <p class="col-md-6">Bob</p>
+                                <input class="col-md-6 people-check" type="checkbox" value="Bob" id="Bob" checked>
+                            </label>
+                            <label for="Alex" class="dropdown-item d-flex align-items-center">
+                                <p class="col-md-6">Alex</p>
+                                <input class="col-md-6 people-check" type="checkbox" value="Alex" id="Alex" checked>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="add-option d-flex">
+                    <span class="col-md-4">Day</span>
+                    <select class="col-md-6 add-elem form-control" id="day">
+                        <option value="Mon">Mon</option>
+                        <option value="Tue">Tue</option>
+                        <option value="Wed">Wed</option>
+                        <option value="Thu">Thu</option>
+                        <option value="Fri">Fri</option>
+                    </select>
+                </div>
+
+                <div class="add-option d-flex">
+                    <span class="col-md-4">Time</span>
+                    <select class="col-md-6 add-elem form-control" id="hour">
+                        <option value="10">10:00</option>
+                        <option value="11">11:00</option>
+                        <option value="12">12:00</option>
+                        <option value="13">13:00</option>
+                        <option value="14">14:00</option>
+                        <option value="15">15:00</option>
+                        <option value="16">16:00</option>
+                        <option value="17">17:00</option>
+                        <option value="18">18:00</option>
+                    </select>
+                </div>
+                <div class="add-buttons d-flex">
+                    <button href="index.html" class="btn btn-danger" id="cancel">Cancel</button>
+                    <button href="index.html" class="btn btn-success" id="create">Create</button>
+                </div>
+            </form>
+        </section>
+
+    </div>
+    <!-- Modal -->
+    <div class="modal-delete">
+        <div class="modal-content">
+            <p>Are you sure you want to delete <span class="del-name"></span> event?</p>
+            <div class="modal-buttons">
+                <button class="btn btn-danger" data-close>No</button>
+                <button class="btn btn-success" data-close>Yes</button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+.event{
+    display: none;
+}
+.add{
+    max-width: 600px;
+    padding: 15px;
+    &-option{
+        margin-bottom: 15px;
+    }
+    &-elem{
+        height: 30px;
+        width: 100%;
+    }
+    &-buttons{
+        justify-content: flex-end;
+        margin-top: 50px;
+        button{
+            margin-left: 10px;
+        }
+    }
+    &-error{
+        background: #ff9c9c;
+        display: none;
+        padding: 5px 15px;
+        span{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 100%;
+            background: #f83f3f;
+            color: #fff;
+            text-align: center;
+            line-height: 20px;
+            margin-right: 15px;
+        }
+    }
+}
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    &-button{
+        position: relative;
+        text-align: left;
+        &::after{
+            content: '∟';
+            position: absolute;
+            display: inline-block;
+            right: 5px;
+            vertical-align: 3px;
+            transform: rotate(-45deg);
+            font-weight: 900;
+            font-size: 16px;
+        }
+    }
+    &-menu{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        display: none;
+        border: 1px solid rgba(0,0,0,.15);
+        border-radius: 2px;
+        background-color: #fff;
+        min-width: 100%;
+        padding: 10px 0;
+    }
+    &-item{
+        width: 100%;
+        padding: 7px 10px;
+        background-color: transparent;
+        border: 0;
+        p{
+            margin-bottom: 0;
+        }
+        &:hover{
+            background-color: rgba(0,0,0,.05);
+        }
+    }
+}
